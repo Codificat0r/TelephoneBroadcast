@@ -14,7 +14,7 @@ public class CallBroadcast extends BroadcastReceiver {
     //DECLARAMOS EL RECEIVER EN EL MANIFEST Y NO HACE FALTA HACER NADA MAS YA
     //EMPIEZA A RECIBIR. EL INTENT DE LLAMADA.
 
-    private static final String TAG = "com.example.Telephone";
+    private static final String TAG = "TELEPHONECOÑO";
 
     @Override
     public void onReceive(Context context, Intent intent) {
