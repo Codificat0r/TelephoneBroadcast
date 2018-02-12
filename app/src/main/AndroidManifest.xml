@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.telephonebroadcast">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -18,9 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CallInformation"/>
         <receiver android:name=".CallBroadcast">
             <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.PHONE_STATE"></action>
+            </intent-filter>
+            <!-- Recibimos el INTENT PERSONALIZADO como si fuera un BROADCAST (que de hecho lo es). -->
+            <intent-filter>
+                <action android:name="com.example.callbroadcast.intent"></action>
             </intent-filter>
         </receiver>
     </application>
